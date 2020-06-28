@@ -1,0 +1,5 @@
+splitted:
+split -b 50m yolov3-custom.weights x
+
+joined:
+cat x* > yolov3-custom.weights
