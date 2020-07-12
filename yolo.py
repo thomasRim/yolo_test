@@ -20,6 +20,7 @@ class Yolo(object):
 
         self.objects = []
         self.confidence = 0.5
+        self.blobResize = 416
         self.xAdd = xAdd
         self.yAdd = yAdd
 
@@ -51,7 +52,7 @@ class Yolo(object):
 
         # Detecting objects
         blob = cv.dnn.blobFromImage(
-            img, 1 / 255.0, (608, 608), (0, 0, 0), True, crop=False
+            img, 1 / 255.0, (self.blobResize, self.blobResize), (0, 0, 0), True, crop=False
         )
 
         self.net.setInput(blob)

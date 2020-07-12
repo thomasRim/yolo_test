@@ -5,13 +5,13 @@ import utils
 import yolo
 import time
 
-should_show_preview = False
+should_show_preview = True
 should_write_result = True
 detect_each_n_frame = 1
 scale = 0.6
 
-videoName = "springs_05"
-videoExt = ".MOV"
+videoName = "springs_04"
+videoExt = ".mov"
 # Net
 sysPath = os.path.dirname(os.path.abspath(__file__))
 
